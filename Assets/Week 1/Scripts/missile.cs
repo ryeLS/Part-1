@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    public float speed = 3f;
+    public float speed = 10f;
     Rigidbody2D rigidBody;
     // Start is called before the first frame update
     void Start()
