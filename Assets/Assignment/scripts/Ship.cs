@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,8 @@ public class Ship : MonoBehaviour
     public float acceleration;
     public float steer;
     public Rigidbody2D rb;
+    public GameObject rocketPrefab;
+    public Transform spawn;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,10 @@ public class Ship : MonoBehaviour
     {
         acceleration = Input.GetAxis("Vertical");
         steer = Input.GetAxis("Horizontal");
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(rocketPrefab, spawn.position, spawn.rotation);
+        }
     }
     private void FixedUpdate()
     {
