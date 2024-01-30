@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Satellite : MonoBehaviour
+public class Meteor : MonoBehaviour
 {
-    public float speed = -3f;
+    public float speed = 10f;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +16,9 @@ public class Satellite : MonoBehaviour
     {
         transform.Rotate(0, 0, -speed * Time.deltaTime);
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Hey! Watch where you're going!");
+        Debug.Log("Great Job, Captain!");
+        Destroy(gameObject);
     }
 }
