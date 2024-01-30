@@ -6,6 +6,7 @@ using UnityEngine;
 public class Ship : MonoBehaviour
 {
     // all assets used from https://kenney.nl/assets/space-shooter-extension
+    // background from Adobe Stock https://stock.adobe.com/ca/images/panorama-milky-way-galaxy-with-stars-and-space-dust-in-the-universe/185425447?prev_url=detail
     public float velocity = 500;
     public float steerspeed = 100;
     public float acceleration;
